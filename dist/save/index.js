@@ -5015,6 +5015,7 @@ function createTar(archiveFolder, sourceDirectories) {
         const workingDirectory = getWorkingDirectory();
         const args = [
             "-cz",
+	    "-H posix",
             "-f",
             constants_1.CacheFilename.replace(new RegExp("\\" + path.sep, "g"), "/"),
             "-P",
