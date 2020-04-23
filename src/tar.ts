@@ -78,6 +78,7 @@ export async function createTar(
     const workingDirectory = getWorkingDirectory();
     const args = [
         "-cz",
+        "-H posix",
         "-f",
         CacheFilename.replace(new RegExp("\\" + path.sep, "g"), "/"),
         "-P",
